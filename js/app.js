@@ -6,9 +6,9 @@ let generatingCell
 
 do {
 
-    generatingCell = parseInt(prompt('Insert a number for the number of rows and columns that you want to play with, for example 8 will generate 8 rows and 8 columns for a total of 64 cells! Than Press Play! NOTE: The number must be between 2 and 10!'))
+    generatingCell = parseInt(prompt('Insert a number for the number of rows and columns that you want to play with, for example 8 will generate 8 rows and 8 columns for a total of 64 cells! Than Press Play! NOTE: The number must be between 1 and 10!'))
 
-}while (isNaN(generatingCell) || generatingCell > 18 || generatingCell < 1)
+}while (isNaN(generatingCell) || generatingCell > 10 || generatingCell < 1)
 console.log(generatingCell)
 
 // invoco la funzione che moltiplica il numero inserito dall'utente per se stesso
