@@ -8,7 +8,7 @@ do {
 
     generatingCell = parseInt(prompt('Insert a number for the number of rows and columns that you want to play with, for example 8 will generate 8 rows and 8 columns for a total of 64 cells! Than Press Play! NOTE: The number must be between 2 and 10!'))
 
-}while (isNaN(generatingCell) || generatingCell > 10 || generatingCell < 1)
+}while (isNaN(generatingCell) || generatingCell > 18 || generatingCell < 1)
 console.log(generatingCell)
 
 // invoco la funzione che moltiplica il numero inserito dall'utente per se stesso
@@ -22,6 +22,8 @@ console.log(gridElement)
 // recupero il button con id "generateGrid" dall'HTML
 const btnElement = document.getElementById('generateGrid')
 console.log(btnElement)
+
+let cellElement
 
 //aggiungo al button la funzione che al click lo faccia sparire e generi al suo posto la griglia
 btnElement.addEventListener ('click', function(){
@@ -37,7 +39,7 @@ btnElement.addEventListener ('click', function(){
         console.log(cellNumbers)
 
         // creo un elemento 'div'
-        let cellElement = document.createElement('div')
+        cellElement = document.createElement('div')
 
         // appendo il div creato all'elemento gridElement
         gridElement.append(cellElement)
@@ -51,11 +53,31 @@ btnElement.addEventListener ('click', function(){
         // calcolo la dimensione delle mie celle in base al numero inserito dall'utente
         cellElement.style.width = "calc(100% / " + generatingCell + ")";
         
-        console.log(cellElement)
+        // console.log(cellElement)
     }
 
+    // recupero gli elementi appena creati che hanno cla classe "cell"
+    const createdCells = document.querySelectorAll('.cell')
+    console.log(createdCells)
 
+    // creo un ciclo nel quale poi creero una funzione che ad ogni click mi mostri il numero della cella e le assegni un background
+    for (let i = 0; i < createdCells.length; i++){
+
+
+        const cells = createdCells[i]
+        // console.log(cells)
+
+        // creo la funzione che al click mi mostri la cella sulla quale ho cliccato e che le assegni anche un background green
+        cells.addEventListener ('click', function(){
+            console.log(i + 1)
+
+            // BONUS
+            cells.style.backgroundColor = "#74E7B8"
+        })
+    }
 })
+
+
 
 
 
