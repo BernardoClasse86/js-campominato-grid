@@ -29,7 +29,7 @@ let cellElement
 btnElement.addEventListener ('click', function(){
 
     // nascondo il bottone al click
-    // btnElement.classList.add('hidden')
+    btnElement.classList.add('hidden')
 
     // creo un ciclo che a sua volta crei un elemento 'div' per ogni iterazione che effettura in base al risultato di totalCell
     for (let i = 0; i < totalCell; i++) {
