@@ -29,7 +29,7 @@ let cellElement
 btnElement.addEventListener ('click', function(){
 
     // nascondo il bottone al click
-    btnElement.classList.add('hidden')
+    // btnElement.classList.add('hidden')
 
     // creo un ciclo che a sua volta crei un elemento 'div' per ogni iterazione che effettura in base al risultato di totalCell
     for (let i = 0; i < totalCell; i++) {
@@ -51,18 +51,17 @@ btnElement.addEventListener ('click', function(){
         cellElement.classList.add('cell')
 
         // calcolo la dimensione delle mie celle in base al numero inserito dall'utente
-        cellElement.style.width = "calc(100% / " + generatingCell + ")";
+        cellElement.style.width = "calc(100% / " + generatingCell + ")"
         
         // console.log(cellElement)
     }
 
-    // recupero gli elementi appena creati che hanno cla classe "cell"
+    // recupero gli elementi appena creati che hanno la classe "cell"
     const createdCells = document.querySelectorAll('.cell')
     console.log(createdCells)
 
     // creo un ciclo nel quale poi creero una funzione che ad ogni click mi mostri il numero della cella e le assegni un background
     for (let i = 0; i < createdCells.length; i++){
-
 
         const cells = createdCells[i]
         // console.log(cells)
@@ -76,31 +75,6 @@ btnElement.addEventListener ('click', function(){
         })
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /********
 FUNZIONI
